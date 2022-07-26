@@ -1,0 +1,391 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(90deg, #BF4222, #E30F87);
+}
+
+.container-all {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.ctn-form {
+    width: 70%;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+.logo {
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+
+   .logo {
+        display: none;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 300px;
+    color: #7a7a7a;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300px;
+    color: #7a7a7a;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    outline: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    color: #E30F87;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    color: white;
+    border: 0px;
+    background: linear-gradient(90deg, #BF4222, #E30F87);
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #E30F87, #BF4222);
+}
+
+
+.text-footer {
+    display: block;
+    margin-top: 60px;
+    text-align: center;
+    color: #7a7a7a;
+    font-weight: 300px;
+}
+
+.text-footer a {
+    color: #029EE1;
+    font-weight: 500px;
+}
+
+.ctn-text {
+    width: 100%;
+    background-image: url(../images/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #E30F87, #BF4222);
+    opacity: 0.8;
+}
+
+.title-description {
+    position: relative;
+    top: 80px;
+    color: white;
+    font-weight: 300px;
+    font-size: 30px;
+}
+
+.text-description {
+    position: relative;
+    top: 110px;
+    color: white;
+    font-size: 16px;
+    font-weight: 200px;
+}
+
+/* TEXT ERROR */
+
+.msg-error {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 800px) {
+
+    .ctn-text {
+        display: none;
+    }
+
+    .ctn-form {
+        margin: auto;
+        width: 100%;
+        background: white;
+    }
+}
+
+.wrapper{
+  margin: 10px;
+}
+
+.wrapper .top_navbar{
+  width: calc(100% - 20px);
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 10px;
+}
+
+.wrapper .top_navbar .hamburger{
+  width: 70px;
+  height: 100%;
+  background: black;
+  padding: 15px 17px;
+  border-top-left-radius: 20px;
+  cursor: pointer;
+}
+
+.wrapper .top_navbar .hamburger div{
+  width: 30px;
+  height: 4px;
+  background: #92a6e2;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.wrapper .top_navbar .top_menu{
+  width: calc(100% - 70px);
+  height: 120px;
+  background: #fff;
+  border: 3px solid black;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 135px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.wrapper .top_navbar .top_menu .logoo{
+  color: black;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .wrapper .top_navbar .top_menu .logoo {
+        display: none;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.wrapper .sidebar{
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  background: black;
+  width: 200px;
+  height: calc(100% - 80px);
+  border-bottom-left-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 7px;
+    color: #92a6e2;
+    white-space: nowrap;
+}
+
+.wrapper .sidebar ul li a:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: steelblue;
+  display: none;
+}
+
+.wrapper .sidebar ul li a span.title{
+  display: inline-block;
+  color: white;
+  font-size: 12.3px;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+  color: #fff;
+  background: steelblue;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+  display: block;
+}
+
+.wrapper .main_container{
+  width: (100% - 200px);
+  margin-top: 140px;
+  margin-left: 200px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .main_container .item{
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.wrapper.collapse .sidebar{
+  width: 70px;
+}
+
+.wrapper.collapse .sidebar ul li a{
+  text-align: center;
+}
+
+.wrapper.collapse .sidebar ul li a span.title{
+  display: none;
+}
+
+.wrapper.collapse .main_container{
+  width: (100% - 70px);
+  margin-left: 70px;
+}
+
+.accordion {
+	color: black;
+	cursor: pointer;
+	text-align: center;
+	padding: 7px;
+	float: left;
+	width: 33.3%;
+	border: 3px solid steelblue;
+}
+
+.accordion:hover{
+	background-color: gray;
+}
+
+.accordion.active{
+	background-color: steelblue;
+	color: white;
+}
+
+.formm{
+	width: 50%;
+	margin: 30px auto;
+	border: 1px solid black;
+}
+
+.button{
+	position: absolute;
+	padding: 5px 16px;
+	width: auto;
+	border: 3px solid black;
+	background-color: black;
+	color: #fafafa;
+}
+
+.button:hover{
+	background-color: gray;
+	color: white;
+}
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td,.table th{
+  padding:5px 5px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:12px;
+}
+
+.table th{
+	background-color: black;
+	color:#ffffff;
+}
+
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+
+/*responsive*/
+
+@media(max-width: 800px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:10px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 30%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr('$show');
+		position: absolute;
+		left:0;
+		width: 30%;
+		padding-left:5px;
+		font-size:12px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+
